@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Doc Viewer</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📄</text></svg>" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">📄 Doc Viewer</div>
+    <div class="doc-title" id="docTitle"></div>
+  </header>
+
+  <div class="layout">
+    <!-- Sidebar: add + list of saved docs -->
+    <aside class="sidebar">
+      <form id="addForm" class="add" autocomplete="off">
+        <input
+          id="addInput"
+          type="text"
+          placeholder="Paste a Google Doc link…"
+          aria-label="Google Doc link"
+        />
+        <button type="submit">Add</button>
+      </form>
+      <div id="addError" class="msg error" hidden></div>
+
+      <ul id="docList" class="doclist"></ul>
+      <p id="emptyHint" class="hint">
+        No docs yet. Paste a Google Doc link above — the doc must be shared as
+        <strong>“Anyone with the link → Viewer.”</strong>
+      </p>
+
+      <p class="footnote">
+        Your list lives in this browser only. The editable copy never changes your real Google Doc.
+      </p>
+    </aside>
+
+    <!-- Main pane: welcome OR viewer -->
+    <main class="main">
+      <section id="welcome" class="welcome">
+        <h1>View your Google Docs, live.</h1>
+        <ol>
+          <li>In Google Docs, click <strong>Share → General access → “Anyone with the link”</strong> and set it to <strong>Viewer</strong>.</li>
+          <li>Copy the link, paste it in the box on the left, and click <strong>Add</strong>.</li>
+          <li>Click a doc to read it <strong>live</strong>, or open an <strong>editable copy</strong> to tinker and copy text from — your real doc stays untouched.</li>
+        </ol>
+        <p class="welcome-share">Sharing this app with friends? They just open the same link and add their own docs.</p>
+      </section>
+
+      <section id="viewer" class="viewer" hidden>
+        <div class="viewer-toolbar">
+          <div id="modes" class="modes">
+            <button type="button" data-mode="live" class="active">Live view</button>
+            <button type="button" data-mode="edit">Editable copy</button>
+          </div>
+          <div class="actions">
+            <button type="button" id="refreshBtn" class="ghost">↻ Refresh</button>
+            <button type="button" id="selectAllBtn" class="ghost" hidden>Select all (then Ctrl+C)</button>
+            <button type="button" id="resetBtn" class="ghost" hidden>Reset copy</button>
+            <span id="saveState" class="savestate" hidden></span>
+          </div>
+        </div>
+
+        <div class="frame-wrap">
+          <iframe id="liveFrame" class="docframe" title="Live document" loading="lazy" hidden></iframe>
+          <!-- SECURITY: keep this sandbox WITHOUT allow-scripts — it is the sole barrier that
+               prevents pulled doc HTML from running code in the user's browser. Do NOT add allow-scripts. -->
+          <iframe id="editFrame" class="docframe" title="Editable copy" sandbox="allow-same-origin" hidden></iframe>
+          <div id="loading" class="overlay" hidden><span class="spinner"></span> Loading…</div>
+          <div id="viewerError" class="overlay msg error" hidden></div>
+        </div>
+        <p id="editHint" class="edit-hint" hidden>
+          This is a private scratch copy. Edit freely and Ctrl+C from it — your real Google Doc is not affected.
+        </p>
+      </section>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

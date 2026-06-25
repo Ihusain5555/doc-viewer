@@ -1,0 +1,585 @@
+- generic [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e3]: 📄 Doc Viewer
+    - generic [ref=e4]: Public data sources
+  - generic [ref=e5]:
+    - complementary [ref=e6]:
+      - generic [ref=e7]:
+        - textbox "Google Doc link" [ref=e8]:
+          - /placeholder: Paste a Google Doc link…
+        - button "Add" [ref=e9] [cursor=pointer]
+      - list [ref=e10]:
+        - listitem "Public data sources" [ref=e11] [cursor=pointer]:
+          - generic [ref=e12]: Public data sources
+          - button "✎" [ref=e13]
+          - button "✕" [ref=e14]
+      - paragraph [ref=e15]: Your list lives in this browser only. The editable copy never changes your real Google Doc.
+    - main [ref=e16]:
+      - generic [ref=e17]:
+        - generic [ref=e18]:
+          - generic [ref=e19]:
+            - button "Live view" [ref=e20] [cursor=pointer]
+            - button "Editable copy" [active] [ref=e21] [cursor=pointer]
+          - generic [ref=e22]:
+            - button "Select all (then Ctrl+C)" [ref=e29] [cursor=pointer]
+            - button "Reset copy" [ref=e30] [cursor=pointer]
+            - generic [ref=e31]: Saved
+        - generic [ref=e24]:
+          - iframe [ref=e32]:
+            - generic [active] [ref=f6e1]:
+              - text: EDIT_TEST_123
+              - generic [ref=f6e2]:
+                - paragraph [ref=f6e3]
+                - paragraph [ref=f6e4]:
+                  - img "Logo Registered Trademark - 400 Pixels Wide.jpg" [ref=f6e6]
+              - paragraph [ref=f6e7]
+              - paragraph [ref=f6e8]: "where to find data: an ever-growing list of public sources"
+              - paragraph [ref=f6e9]
+              - paragraph [ref=f6e10]:
+                - text: "Here are some places to find/access publicly available data. Help us make this list comprehensive: if you know of other sources we should include, please"
+                - link "email us" [ref=f6e12]:
+                  - /url: mailto:support@storytellingwithdata.com
+                - text: .
+              - separator [ref=f6e13]
+              - paragraph [ref=f6e14]
+              - paragraph [ref=f6e15]
+              - list [ref=f6e16]:
+                - listitem [ref=f6e17]:
+                  - text: ●
+                  - link "American Community Survey" [ref=f6e19]:
+                    - /url: https://www.google.com/url?q=https://www.census.gov/programs-surveys/acs/&sa=D&source=editors&ust=1782403183010848&usg=AOvVaw3YQRBR5cf-FacBtT1tBRJQ
+                  - text: "- the premier source for detailed information about the American people and workforce."
+                - listitem [ref=f6e20]:
+                  - text: ●
+                  - link "American Soccer Analysis" [ref=f6e22]:
+                    - /url: https://www.google.com/url?q=https://viz.americansocceranalysis.com/&sa=D&source=editors&ust=1782403183011113&usg=AOvVaw3drpahDWzBHPaUFKPiKZsi
+                  - text: "- all soccer stats for MLS (the soccer league in the USA and Canada)"
+                - listitem [ref=f6e23]:
+                  - text: ●
+                  - link "ArcGIS Hub Open Data" [ref=f6e25]:
+                    - /url: https://www.google.com/url?q=http://hub.arcgis.com/pages/open-data&sa=D&source=editors&ust=1782403183011346&usg=AOvVaw36Qon_BOIR1dkliMGIZVm6
+                  - text: "- Localized geo-spatial data."
+                - listitem [ref=f6e26]:
+                  - text: ●
+                  - link "Armed Conflict Location & Event Data Project (ACLED)" [ref=f6e28]:
+                    - /url: https://www.google.com/url?q=https://www.acleddata.com/about-acled/&sa=D&source=editors&ust=1782403183011530&usg=AOvVaw3FIEHrF3Afw_dVFyFeQz5c
+                  - text: "- records global data on political violence and protest events"
+                - listitem [ref=f6e29]:
+                  - text: ●
+                  - link "The Association of Religious Data Archives" [ref=f6e31]:
+                    - /url: https://www.google.com/url?q=https://www.thearda.com/data-archive/browse-categories?cid%3DF%23F&sa=D&source=editors&ust=1782403183011799&usg=AOvVaw1BywZtbU2sy0OjbtlE1TRF
+                  - text: "- A collection of surveys, polls, and other data submitted by researchers and made available online by the ARDA."
+                - listitem [ref=f6e32]:
+                  - text: ●
+                  - link "Awesome JSON Datasets" [ref=f6e34]:
+                    - /url: https://www.google.com/url?q=https://github.com/jdorfman/awesome-json-datasets&sa=D&source=editors&ust=1782403183012116&usg=AOvVaw3CfizwsUdkARm-TABoc22N
+                  - text: "- GitHub repository with links to data on bitcoin, cars, climate, and more."
+                - listitem [ref=f6e35]:
+                  - text: ●
+                  - link "Awesome Public Datasets" [ref=f6e37]:
+                    - /url: https://www.google.com/url?q=https://github.com/caesar0301/awesome-public-datasets&sa=D&source=editors&ust=1782403183012388&usg=AOvVaw0ZcO5KMO0UvWUeDl46JNNF
+                  - text: "- GitHub repository, topic-centric list of high-quality open datasets in public domains. By everyone, for everyone!"
+                - listitem [ref=f6e38]:
+                  - text: ●
+                  - link "BJS.gov" [ref=f6e40]:
+                    - /url: https://www.google.com/url?q=https://www.bjs.gov/index.cfm?ty%3Dabu&sa=D&source=editors&ust=1782403183012721&usg=AOvVaw2ATqOBDTn0ye45IPLFSs9b
+                  - text: "- Bureau of Justice statistics and data."
+                - listitem [ref=f6e41]:
+                  - text: ●
+                  - link "BRFSS" [ref=f6e43]:
+                    - /url: https://www.google.com/url?q=https://chronicdata.cdc.gov/browse?category%3DBehavioral%2BRisk%2BFactors&sa=D&source=editors&ust=1782403183012928&usg=AOvVaw3ry46ZK1rhkTnGD87rjR9S
+                  - text: "- Behavioral Risk Factor Surveillance System"
+                - listitem [ref=f6e44]:
+                  - text: ●
+                  - link "British Oceanographic Data Center" [ref=f6e46]:
+                    - /url: https://www.google.com/url?q=https://www.bodc.ac.uk/data/&sa=D&source=editors&ust=1782403183013244&usg=AOvVaw091hrtZVBvqDv90qmaMEV9
+                  - text: "- Publicly accessible marine data."
+                - listitem [ref=f6e47]:
+                  - text: ●
+                  - link "Bureau of Transportation Statistics" [ref=f6e49]:
+                    - /url: https://www.google.com/url?q=https://www.bts.gov/&sa=D&source=editors&ust=1782403183013489&usg=AOvVaw24457cZTUQJqQiwywR5QZs
+                  - text: "- Preeminent source of statistics on commercial aviation, multimodal freight activity, and transportation economics; provides context to decision makers and the public for understanding statistics on transportation."
+                - listitem [ref=f6e50]:
+                  - text: ●
+                  - link "CDC" [ref=f6e52]:
+                    - /url: https://www.google.com/url?q=https://data.cdc.gov/&sa=D&source=editors&ust=1782403183013803&usg=AOvVaw3Dv0FIOfxjaUfyG9wnJNkC
+                  - text: "- Center for Disease Control datasets by topic."
+                - listitem [ref=f6e53]:
+                  - text: ●
+                  - link "CDC Wonder Online Database" [ref=f6e55]:
+                    - /url: https://www.google.com/url?q=https://wonder.cdc.gov/&sa=D&source=editors&ust=1782403183013953&usg=AOvVaw1ZIqu5OH5mB0UQOw3sJz6W
+                  - text: "- WONDER online databases utilize a rich ad-hoc query system for the analysis of public health data."
+                - listitem [ref=f6e56]:
+                  - text: ●
+                  - link "Canada" [ref=f6e58]:
+                    - /url: https://www.google.com/url?q=http://open.canada.ca/en/open-data&sa=D&source=editors&ust=1782403183014194&usg=AOvVaw3BmXdj8DdKxH--_LzS3KPf
+                  - text: "- open data for the federal government of Canada"
+                - listitem [ref=f6e59]:
+                  - text: ●
+                  - link "Child Trends DataBank" [ref=f6e61]:
+                    - /url: https://www.google.com/url?q=https://www.childtrends.org/&sa=D&source=editors&ust=1782403183014349&usg=AOvVaw016elr85HteRp8iLV3-AR4
+                  - text: "- Child Trends improves the lives and prospects of children and youth by conducting high-quality research and sharing the resulting knowledge with practitioners and policymakers."
+                - listitem [ref=f6e62]:
+                  - text: ●
+                  - link "City of Chicago" [ref=f6e64]:
+                    - /url: https://www.google.com/url?q=https://data.cityofchicago.org/&sa=D&source=editors&ust=1782403183014652&usg=AOvVaw0vwl5Licwfip_WoM1goIwE
+                  - text: "- open data portal for all things Windy City"
+                - listitem [ref=f6e65]:
+                  - text: ●
+                  - link "COVID-19 School Data Hub" [ref=f6e67]:
+                    - /url: https://www.google.com/url?q=https://www.covidschooldatahub.com/&sa=D&source=editors&ust=1782403183014852&usg=AOvVaw2f7Ne8wpzuGLuOq7rDJldQ
+                  - text: "- A central database for educators, researchers, and policymakers to understand how the COVID-19 pandemic shaped US students’ modes of learning in 2020-21."
+                - listitem [ref=f6e68]:
+                  - text: ●
+                  - link "Data.gov" [ref=f6e70]:
+                    - /url: https://www.google.com/url?q=https://www.data.gov/&sa=D&source=editors&ust=1782403183015251&usg=AOvVaw3J_-11Is3gipUBDU7bZY94
+                  - text: "- The home of the U.S. Government’s open data."
+                - listitem [ref=f6e71]:
+                  - text: ●
+                  - link "Data.gov.au" [ref=f6e73]:
+                    - /url: https://www.google.com/url?q=https://data.gov.au/&sa=D&source=editors&ust=1782403183015417&usg=AOvVaw11mR24bhvBF5RXWti4hY_r
+                  - text: "- Australian government’s open data."
+                - listitem [ref=f6e74]:
+                  - text: ●
+                  - link "Data.gov.in" [ref=f6e76]:
+                    - /url: https://www.google.com/url?q=https://data.gov.in/&sa=D&source=editors&ust=1782403183015540&usg=AOvVaw3YTUQo7Dobhgr4OWMZvdX7
+                  - text: "- Indian government’s open data."
+                - listitem [ref=f6e77]:
+                  - text: ●
+                  - link "Data.gov.nz" [ref=f6e79]:
+                    - /url: https://www.google.com/url?q=https://t.co/POKFtVWeky&sa=D&source=editors&ust=1782403183015667&usg=AOvVaw0zg10y6Ciy9wG0WsU0E3dg
+                  - text: "- New Zealand government’s open data."
+                - listitem [ref=f6e80]:
+                  - text: ●
+                  - link "Data.gov.uk" [ref=f6e82]:
+                    - /url: https://www.google.com/url?q=https://data.gov.uk/&sa=D&source=editors&ust=1782403183015790&usg=AOvVaw0iq30jKzRYahp5nr-LWlIT
+                  - text: "- Data published by UK government departments and agencies, public bodies, local authorities."
+                - listitem [ref=f6e83]:
+                  - text: ●
+                  - link "Data.gov.sg" [ref=f6e85]:
+                    - /url: https://www.google.com/url?q=https://data.gov.sg/&sa=D&source=editors&ust=1782403183015969&usg=AOvVaw0BPL-MJG1ugfT0ESSOSu6u
+                  - text: "- Singapore government’s open data."
+                - listitem [ref=f6e86]:
+                  - text: ●
+                  - link "Data is Plural" [ref=f6e88]:
+                    - /url: https://www.google.com/url?q=https://docs.google.com/spreadsheets/d/1wZhPLMCHKJvwOkP4juclhjFgqIY8fQFMemwKL2c64vk/edit%23gid%3D0&sa=D&source=editors&ust=1782403183016177&usg=AOvVaw2YlFQFXuixGeZFuEZXIoeU
+                  - text: "- Spreadsheet of public datasets and sources."
+                - listitem [ref=f6e89]:
+                  - text: ●
+                  - link "DataSF" [ref=f6e91]:
+                    - /url: https://www.google.com/url?q=https://datasf.org/&sa=D&source=editors&ust=1782403183016343&usg=AOvVaw2bOf_QnpDuF97MtlESTD7l
+                  - text: "- Search hundreds of datasets from the City and County of San Francisco."
+                - listitem [ref=f6e92]:
+                  - text: ●
+                  - link "Dataverse" [ref=f6e94]:
+                    - /url: https://www.google.com/url?q=https://dataverse.org/&sa=D&source=editors&ust=1782403183016517&usg=AOvVaw2x9qDwDjSIGqcFtQhqXgWk
+                  - text: "- Open source research data repository software."
+                - listitem [ref=f6e95]:
+                  - text: ●
+                  - link "Data.world" [ref=f6e97]:
+                    - /url: https://www.google.com/url?q=https://data.world/&sa=D&source=editors&ust=1782403183016678&usg=AOvVaw1FuUxnnChBegYB9VIJ5fIu
+                  - text: "- Data aggregator of public datasets, projects and sources."
+                - listitem [ref=f6e98]:
+                  - text: ●
+                  - link "Diversity Data Kids" [ref=f6e100]:
+                    - /url: https://www.google.com/url?q=http://www.diversitydatakids.org/&sa=D&source=editors&ust=1782403183016840&usg=AOvVaw1vjd7j9vwS8U3Rb5we9I8X
+                  - text: "- Data on diversity, opportunity and equity amongst US children"
+                - listitem [ref=f6e101]:
+                  - text: ●
+                  - link "DRYAD" [ref=f6e103]:
+                    - /url: https://www.google.com/url?q=http://datadryad.org/&sa=D&source=editors&ust=1782403183016995&usg=AOvVaw2fNJmQSozoZ2kdJELeOOsK
+                  - text: "- Curated general-purpose repository that makes the data underlying scientific publications discoverable, freely reusable, and citable."
+                - listitem [ref=f6e104]:
+                  - text: ●
+                  - link "The Economist" [ref=f6e106]:
+                    - /url: https://www.google.com/url?q=http://www.economist.com/markets-data&sa=D&source=editors&ust=1782403183017290&usg=AOvVaw1Mle4NgdJQJpEC5_DXY38o
+                  - text: "- markets & data."
+                - listitem [ref=f6e107]:
+                  - text: ●
+                  - link "EIA" [ref=f6e109]:
+                    - /url: https://www.google.com/url?q=https://www.eia.gov/&sa=D&source=editors&ust=1782403183017407&usg=AOvVaw2pv1wRGJh5gLA0cwNCGXpE
+                  - text: "- US Energy Information Administration’s energy data."
+                - listitem [ref=f6e110]:
+                  - text: ●
+                  - link "Enigma Public" [ref=f6e112]:
+                    - /url: https://www.google.com/url?q=https://public.enigma.com/&sa=D&source=editors&ust=1782403183017568&usg=AOvVaw0hfFyQrfAk9SNt4aqGdpyD
+                  - text: "- “The world’s broadest collection of public data”."
+                - listitem [ref=f6e113]:
+                  - text: ●
+                  - link "Environmental Information Data Centre" [ref=f6e115]:
+                    - /url: https://www.google.com/url?q=http://eidc.ceh.ac.uk/&sa=D&source=editors&ust=1782403183017818&usg=AOvVaw3kzmqkEqNa7Z0ybTLQ9PVr
+                  - text: "- a NERC Data Centre hosted by the UK Centre for Ecology & Hydrology (UKCEH) concerned with the terrestrial and freshwater sciences."
+                - listitem [ref=f6e116]:
+                  - text: ●
+                  - link "Eurocontrol" [ref=f6e118]:
+                    - /url: https://www.google.com/url?q=https://ansperformance.eu/data/&sa=D&source=editors&ust=1782403183018047&usg=AOvVaw11MlEZBI7i3gDe8RDuInVD
+                  - text: "- the European equivalent of the FAA, publishes traffic and CO2 emissions data and"
+                  - link "archive" [ref=f6e120]:
+                    - /url: https://www.google.com/url?q=https://www.eurocontrol.int/dashboard/rnd-data-archive&sa=D&source=editors&ust=1782403183018204&usg=AOvVaw3OVBrR0S_GmaP6RpwBWHa5
+                - listitem [ref=f6e121]:
+                  - text: ●
+                  - link "Eurostat" [ref=f6e123]:
+                    - /url: https://www.google.com/url?q=http://ec.europa.eu/eurostat&sa=D&source=editors&ust=1782403183018311&usg=AOvVaw0w3CB2F3D5MVr3NH7pLSrR
+                  - text: "- European statistics."
+                - listitem [ref=f6e124]:
+                  - text: ●
+                  - link "FAA Data" [ref=f6e126]:
+                    - /url: https://www.google.com/url?q=https://www.faa.gov/data_research/&sa=D&source=editors&ust=1782403183018456&usg=AOvVaw3uWErd-veEvbDnpK6tyndn
+                  - text: "- Data and statistics from Federal Aviation Administration research."
+                - listitem [ref=f6e127]:
+                  - text: ●
+                  - link "FAOSTAT Data" [ref=f6e129]:
+                    - /url: https://www.google.com/url?q=http://www.fao.org/faostat/en/%23data&sa=D&source=editors&ust=1782403183018727&usg=AOvVaw1fjqUnc9JvfpXyy_DgNz-L
+                  - text: "- Food and Agriculture Organization of United Nations datasets."
+                - listitem [ref=f6e130]:
+                  - text: ●
+                  - link "FBI Crime Data Explorer" [ref=f6e132]:
+                    - /url: https://www.google.com/url?q=https://cde.ucr.cjis.gov/LATEST/webapp/%23/pages/home&sa=D&source=editors&ust=1782403183018909&usg=AOvVaw2DgDz10kcQqozm_6RV70Vo
+                  - text: "-"
+                  - link "View trends" [ref=f6e134]:
+                    - /url: https://www.google.com/url?q=https://crime-data-explorer.fr.cloud.gov/explorer/violent-crime&sa=D&source=editors&ust=1782403183019015&usg=AOvVaw191mCnOAYI8Iz6cPAGUftQ
+                  - text: ","
+                  - link "download bulk datasets" [ref=f6e136]:
+                    - /url: https://www.google.com/url?q=https://crime-data-explorer.fr.cloud.gov/downloads-and-docs&sa=D&source=editors&ust=1782403183019112&usg=AOvVaw2k0-Glp_uTMIM443dWDCaL
+                  - text: ", and access the"
+                  - link "Crime Data API" [ref=f6e138]:
+                    - /url: https://www.google.com/url?q=https://crime-data-explorer.fr.cloud.gov/api&sa=D&source=editors&ust=1782403183019216&usg=AOvVaw2IIaOnr8zTQ0Lz_fwAopq1
+                  - text: for reported crime at the national, state, and agency levels.
+                - listitem [ref=f6e139]:
+                  - text: ●
+                  - link "FEMA Data Feeds" [ref=f6e141]:
+                    - /url: https://www.google.com/url?q=https://www.fema.gov/data-feeds&sa=D&source=editors&ust=1782403183019383&usg=AOvVaw06o0ltey69Ieg96t29OllF
+                  - text: "- FEMA data available in multiple formats."
+                - listitem [ref=f6e142]:
+                  - text: ●
+                  - link "Figshare" [ref=f6e144]:
+                    - /url: https://www.google.com/url?q=https://figshare.com/&sa=D&source=editors&ust=1782403183019530&usg=AOvVaw3Ze7y0bhQp1l0J5arVKzyU
+                  - text: "- Opening up scientific data to the world."
+                - listitem [ref=f6e145]:
+                  - text: ●
+                  - link "FlowingData" [ref=f6e147]:
+                    - /url: https://www.google.com/url?q=http://flowingdata.com/2009/10/01/30-resources-to-find-the-data-you-need/&sa=D&source=editors&ust=1782403183019699&usg=AOvVaw3P60DKa-WtSyeww2mSrS3R
+                  - text: "- 30 resources to find the data you need."
+                - listitem [ref=f6e148]:
+                  - text: ●
+                  - link "Gapminder.org" [ref=f6e150]:
+                    - /url: https://www.google.com/url?q=https://www.gapminder.org/data/&sa=D&source=editors&ust=1782403183019864&usg=AOvVaw17X0X-HdvqBRs_DxDUNhFv
+                  - text: "- Data in Gapminder World (over 500 entries)."
+                - listitem [ref=f6e151]:
+                  - text: ●
+                  - link "The General Social Survey" [ref=f6e153]:
+                    - /url: https://www.google.com/url?q=http://gss.norc.org/Get-The-Data&sa=D&source=editors&ust=1782403183020013&usg=AOvVaw2LWXw-r4RTyzVsbGeLDY27
+                  - text: "- Datasets from NORC.org on what Americans think and feel about such issues as national spending priorities, crime/punishment, intergroup relations, and confidence in institutions."
+                - listitem [ref=f6e154]:
+                  - text: ●
+                  - link "Google Public Data Explorer" [ref=f6e156]:
+                    - /url: https://www.google.com/url?q=https://www.google.com/publicdata/&sa=D&source=editors&ust=1782403183020382&usg=AOvVaw18G1bMpuqdxs1Zg6QTpDEN
+                  - text: "- Google's Public Data Explorer provides public data and forecasts from a range of international organizations and academic institutions."
+                - listitem [ref=f6e157]:
+                  - text: ●
+                  - link "HealthData.gov" [ref=f6e159]:
+                    - /url: https://www.google.com/url?q=https://www.healthdata.gov/&sa=D&source=editors&ust=1782403183020685&usg=AOvVaw1s1GQqwWSTcFNJeNksCAiS
+                  - text: "- dedicated to making high value health data more accessible to entrepreneurs, researchers, and policy makers in the hopes of better health outcomes for all."
+                - listitem [ref=f6e160]:
+                  - text: ●
+                  - link "Health and Retirement Study" [ref=f6e162]:
+                    - /url: https://www.google.com/url?q=https://hrs.isr.umich.edu/about&sa=D&source=editors&ust=1782403183020935&usg=AOvVaw0xblkbVBSrNkX8cO9j-gnU
+                  - text: "- The University of Michigan Health and Retirement Study (HRS) is a longitudinal panel study that surveys a representative sample of approximately 20,000 people in America, supported by the National Institute on Aging (NIA U01AG009740) and the Social Security Administration"
+                - listitem [ref=f6e163]:
+                  - text: ●
+                  - link "Human Fertility Database" [ref=f6e165]:
+                    - /url: https://www.google.com/url?q=https://www.humanfertility.org/&sa=D&source=editors&ust=1782403183021281&usg=AOvVaw0bvLj7w71Ax6-kPd-weHjc
+                  - text: "- Detailed and high-quality data on period and cohort fertility to facilitate research on changes and inter-country differences in fertility in the past and in the modern era."
+                - listitem [ref=f6e166]:
+                  - text: ●
+                  - link "Human Mortality Database" [ref=f6e168]:
+                    - /url: https://www.google.com/url?q=http://www.mortality.org/&sa=D&source=editors&ust=1782403183021568&usg=AOvVaw3duIdHScIMXoSKV8OrCnf9
+                  - text: "- Provides detailed mortality and population data to researchers, students, journalists, policy analysts, and others interested in the history of human longevity."
+                - listitem [ref=f6e169]:
+                  - text: ●
+                  - link "The Huntington’s Early California Population Project" [ref=f6e171]:
+                    - /url: https://www.google.com/url?q=http://www.huntington.org/information/ecppmain.htm&sa=D&source=editors&ust=1782403183021891&usg=AOvVaw2fG3K98DCyd6arHiLwo6rI
+                  - text: "- Public access to all the information contained in California's historic mission registers."
+                - listitem [ref=f6e172]:
+                  - text: ●
+                  - link "IIE.org Open Doors Data Portal" [ref=f6e174]:
+                    - /url: https://www.google.com/url?q=https://opendoorsdata.org/&sa=D&source=editors&ust=1782403183022090&usg=AOvVaw03_9S-UNY6Vm3y_floCuY3
+                  - text: "- Data tables for the past decade on international students and scholars in the United States and on American students studying abroad for academic credit."
+                - listitem [ref=f6e175]:
+                  - text: ●
+                  - link "IPUMS" [ref=f6e177]:
+                    - /url: https://www.google.com/url?q=https://www.ipums.org/&sa=D&source=editors&ust=1782403183022311&usg=AOvVaw2s39_dMq-UKQcgTFdBkoRk
+                  - text: "- Provides census and survey data from around the world integrated across time and space."
+                - listitem [ref=f6e178]:
+                  - text: ●
+                  - link "Kaggle" [ref=f6e180]:
+                    - /url: https://www.google.com/url?q=https://www.kaggle.com/datasets&sa=D&source=editors&ust=1782403183022478&usg=AOvVaw2cSZfxitt_LDPLDcG3oRkl
+                  - text: "- Open datasets on variety of topics (government, health, science, popular games, dating trends)."
+                - listitem [ref=f6e181]:
+                  - text: ●
+                  - link "KIDS COUNT Data Center" [ref=f6e183]:
+                    - /url: https://www.google.com/url?q=https://datacenter.kidscount.org/&sa=D&source=editors&ust=1782403183022673&usg=AOvVaw2CCCI7VlvAHGZqqTpzhRcl
+                  - text: "- Provides data on children and families"
+                - listitem [ref=f6e184]:
+                  - text: ●
+                  - link "KDNuggets Datasets" [ref=f6e186]:
+                    - /url: https://www.google.com/url?q=https://www.kdnuggets.com/datasets/index.html&sa=D&source=editors&ust=1782403183022836&usg=AOvVaw1hCVoBB2ZqdaMXyk96bEpS
+                  - text: "- Lists a ton of data repositories."
+                - listitem [ref=f6e187]:
+                  - text: ●
+                  - link "London Datastore" [ref=f6e189]:
+                    - /url: https://www.google.com/url?q=https://data.london.gov.uk/&sa=D&source=editors&ust=1782403183023063&usg=AOvVaw173oL3pkBSF37huIQSLdJj
+                  - text: "- The London Datastore is a free and open data-sharing portal where anyone can access data relating to London."
+                - listitem [ref=f6e190]:
+                  - text: ●
+                  - link "Makeover Monday" [ref=f6e192]:
+                    - /url: https://www.google.com/url?q=https://makeovermonday.co.uk/&sa=D&source=editors&ust=1782403183023455&usg=AOvVaw3MQdSaHz53lxrXlWib1dJt
+                  - text: "- Datasets from the weekly Makeover Monday competition."
+                - listitem [ref=f6e193]:
+                  - text: ●
+                  - link "MEPS" [ref=f6e195]:
+                    - /url: https://www.google.com/url?q=https://meps.ahrq.gov/mepsweb/data_stats/download_data_files.jsp&sa=D&source=editors&ust=1782403183023700&usg=AOvVaw3hmYbPphC0by6vei4uCjW5
+                  - text: "- Medical Expenditure Panel Survey"
+                - listitem [ref=f6e196]:
+                  - text: ●
+                  - link "National Center for Education Statistics" [ref=f6e198]:
+                    - /url: https://www.google.com/url?q=https://nces.ed.gov/&sa=D&source=editors&ust=1782403183023863&usg=AOvVaw2UMkX8iAt1zEvDtP46FIgZ
+                  - text: "- primary federal entity for data related to education."
+                - listitem [ref=f6e199]:
+                  - text: ●
+                  - link "National Transit Database" [ref=f6e201]:
+                    - /url: https://www.google.com/url?q=https://www.transit.dot.gov/ntd&sa=D&source=editors&ust=1782403183024062&usg=AOvVaw2rCLniLhPA-2Ex44ta8wYj
+                  - text: "- Congress established the NTD to be the Nation’s primary source for information and statistics on the transit systems of the United States."
+                - listitem [ref=f6e202]:
+                  - text: ●
+                  - link "Natural Earth" [ref=f6e204]:
+                    - /url: https://www.google.com/url?q=https://www.naturalearthdata.com/&sa=D&source=editors&ust=1782403183024334&usg=AOvVaw2yfpVibAxRfI4-3dbqvokX
+                  - text: "- Free vector and raster map data at 1:10m, 1:50m, and 1:110m scales"
+                - listitem [ref=f6e205]:
+                  - text: ●
+                  - link "NASA" [ref=f6e207]:
+                    - /url: https://www.google.com/url?q=https://data.giss.nasa.gov/&sa=D&source=editors&ust=1782403183024514&usg=AOvVaw0Cu-fp9AJfKd-RkYDDVnEX
+                  - text: "- National Aeronautics and Space Administration datasets and images."
+                - listitem [ref=f6e208]:
+                  - text: ●
+                  - link "NASA Earth Data" [ref=f6e210]:
+                    - /url: https://www.google.com/url?q=https://earthdata.nasa.gov/&sa=D&source=editors&ust=1782403183024672&usg=AOvVaw0Y8e3Md3y5YbcCewZkQxfB
+                  - text: "- Data from The Earth Observing System Data and Information System (EOSDIS)."
+                - listitem [ref=f6e211]:
+                  - text: ●
+                  - link "NHAMCS" [ref=f6e213]:
+                    - /url: https://www.google.com/url?q=http://www.nber.org/data/national-hospital-ambulatory-medical-care-survey.html&sa=D&source=editors&ust=1782403183024852&usg=AOvVaw23IXz2TmQLqNATYBBafL2d
+                  - text: "- National Hospital Ambulatory Medical Care Survey Data."
+                - listitem [ref=f6e214]:
+                  - text: ●
+                  - link "NHANES" [ref=f6e216]:
+                    - /url: https://www.google.com/url?q=https://wwwn.cdc.gov/nchs/nhanes/Default.aspx&sa=D&source=editors&ust=1782403183025003&usg=AOvVaw285nyQiOOb1EEE5cVlSXBz
+                  - text: "- National Health and Nutrition Examination Survey"
+                - listitem [ref=f6e217]:
+                  - text: ●
+                  - link "New York City" [ref=f6e219]:
+                    - /url: https://www.google.com/url?q=https://opendata.cityofnewyork.us/data/&sa=D&source=editors&ust=1782403183025167&usg=AOvVaw0CLhAtq9sS5n_Ngk37vF4L
+                  - text: "- Access information that is produced and used by New York City government."
+                - listitem [ref=f6e220]:
+                  - text: ●
+                  - link "New York State" [ref=f6e222]:
+                    - /url: https://www.google.com/url?q=https://data.ny.gov/&sa=D&source=editors&ust=1782403183025343&usg=AOvVaw2lrpFTmtidkgHZw_W4Glz4
+                  - text: "-"
+                  - link "Browse" [ref=f6e224]:
+                    - /url: https://www.google.com/url?q=https://data.ny.gov/browse&sa=D&source=editors&ust=1782403183025409&usg=AOvVaw0tfc0Fp7tWftQ-er9sY8Dh
+                  - text: and download over 1,500 New York State data resources on topics ranging from farmers’ markets to solar photovoltaic projects to MTA turnstile usage.
+                - listitem [ref=f6e225]:
+                  - text: ●
+                  - link "ODI Leeds" [ref=f6e227]:
+                    - /url: https://www.google.com/url?q=http://odileeds.org/data/&sa=D&source=editors&ust=1782403183025626&usg=AOvVaw0fddnUdOzEwSlEMndhsnLj
+                  - text: "- Pioneer nodes bring together communities, host events, produce open data projects and help promote understanding of open data in our region and worldwide."
+                - listitem [ref=f6e228]:
+                  - text: ●
+                  - link "OECD Data" [ref=f6e230]:
+                    - /url: https://www.google.com/url?q=https://data.oecd.org/&sa=D&source=editors&ust=1782403183025855&usg=AOvVaw1VFFbm5NxIW-h59z-QbbQ1
+                  - text: "- Find, compare and share the latest OECD data: charts, maps, tables and related publications."
+                - listitem [ref=f6e231]:
+                  - text: ●
+                  - link "Office for National Statistics" [ref=f6e233]:
+                    - /url: https://www.google.com/url?q=https://www.ons.gov.uk/&sa=D&source=editors&ust=1782403183026062&usg=AOvVaw29_61uRRkAd_Vrk8MjaCal
+                  - text: "- The UK's largest independent producer of official statistics and the recognised national statistical institute of the UK."
+                - listitem [ref=f6e234]:
+                  - text: ●
+                  - link "Toronto Open Data" [ref=f6e236]:
+                    - /url: https://www.google.com/url?q=https://www.ontario.ca/search/data-catalogue&sa=D&source=editors&ust=1782403183026306&usg=AOvVaw0_TVFbr1Jm3GglYTojxr4s
+                  - text: "- Open data from the provincial government of Ontario, Canada"
+                - listitem [ref=f6e237]:
+                  - text: ●
+                  - link "Open Data Network" [ref=f6e239]:
+                    - /url: https://www.google.com/url?q=https://www.opendatanetwork.com/&sa=D&source=editors&ust=1782403183026480&usg=AOvVaw2GxW7BOSmri5GhfC3w3WzH
+                  - text: "- Publish data and share. Find data and build. Answer questions."
+                - listitem [ref=f6e240]:
+                  - text: ●
+                  - link "Open Street Maps" [ref=f6e242]:
+                    - /url: https://www.google.com/url?q=https://www.openstreetmap.org/&sa=D&source=editors&ust=1782403183026648&usg=AOvVaw11aPkItlErA3GaqEvT8HfA
+                  - text: "- Community-based where users contribute and maintain data about roads, trails, cafés, railway stations, and much more, all over the world."
+                - listitem [ref=f6e243]:
+                  - text: ●
+                  - link "Opportunity Atlas" [ref=f6e245]:
+                    - /url: https://www.google.com/url?q=https://www.opportunityatlas.org/&sa=D&source=editors&ust=1782403183026894&usg=AOvVaw2upto_5WPXF7LBqf-ukLb4
+                  - text: "- data on childhood outcomes and inequality in the US."
+                - listitem [ref=f6e246]:
+                  - text: ●
+                  - link "Our World in Data" [ref=f6e248]:
+                    - /url: https://www.google.com/url?q=https://ourworldindata.org/&sa=D&source=editors&ust=1782403183027133&usg=AOvVaw2EHOXEyYarrRP8efzLqbce
+                  - text: "- Explore the ongoing history of human civilization at the broadest level, through research and data visualization (with downloadable datasets)."
+                - listitem [ref=f6e249]:
+                  - text: ●
+                  - link "PermID from Thomson Reuters" [ref=f6e251]:
+                    - /url: https://www.google.com/url?q=https://permid.org/&sa=D&source=editors&ust=1782403183027619&usg=AOvVaw20PaYahTTavNeubJB3n4p3
+                  - text: "- PermIDs are open, permanent and universal identifiers where underlying attributes capture the context of the identity they each represent."
+                - listitem [ref=f6e252]:
+                  - text: ●
+                  - link "Pew Research Center" [ref=f6e254]:
+                    - /url: https://www.google.com/url?q=http://www.pewresearch.org/download-datasets/&sa=D&source=editors&ust=1782403183028086&usg=AOvVaw0nvNK1znM2WXqwTknuGiO9
+                  - text: "- Download datasets."
+                - listitem [ref=f6e255]:
+                  - text: ●
+                  - link "PolicyMap" [ref=f6e257]:
+                    - /url: https://www.google.com/url?q=https://www.policymap.com/&sa=D&source=editors&ust=1782403183028282&usg=AOvVaw0MdOjwJ-0LEzsxdqM_2kcS
+                  - text: "- Easy-to-use online mapping with data on demographics, real estate, health, jobs and more in communities across the US."
+                - listitem [ref=f6e258]:
+                  - text: ●
+                  - link "Princeton University Library" [ref=f6e260]:
+                    - /url: https://www.google.com/url?q=https://libguides.princeton.edu/politics/opinion&sa=D&source=editors&ust=1782403183028677&usg=AOvVaw0rgHfTersj3b-Lxtyv2o8G
+                  - text: "- Political opinion & survey data sources."
+                - listitem [ref=f6e261]:
+                  - text: ●
+                  - link "re3data.org" [ref=f6e263]:
+                    - /url: https://www.google.com/url?q=https://www.re3data.org/&sa=D&source=editors&ust=1782403183028938&usg=AOvVaw0BHY_D1EHI-poAF3Oz7XDk
+                  - text: "- Registry of research data repositories."
+                - listitem [ref=f6e264]:
+                  - text: ●
+                  - link "Retrosheet.org" [ref=f6e266]:
+                    - /url: https://www.google.com/url?q=http://www.retrosheet.org/%23&sa=D&source=editors&ust=1782403183029179&usg=AOvVaw2UsKv599Nnk2UK1gkU9NFT
+                  - text: "- Baseball play by play and game log stats back to the 20s (see “data downloads”)."
+                - listitem [ref=f6e267]:
+                  - text: ●
+                  - link "Statista" [ref=f6e269]:
+                    - /url: https://www.google.com/url?q=https://www.statista.com/&sa=D&source=editors&ust=1782403183029478&usg=AOvVaw06IER86llepP5vtiNh75d1
+                  - text: "- Statistics portal for stats & studies from 18,000 sources."
+                - listitem [ref=f6e270]:
+                  - text: ●
+                  - link "St. Louis Federal Reserve" [ref=f6e272]:
+                    - /url: https://www.google.com/url?q=https://fred.stlouisfed.org/&sa=D&source=editors&ust=1782403183029760&usg=AOvVaw2ZoKgwIpI6vD-vHK64iNfj
+                  - text: "- Download 507,000 US & international time series from 87 sources."
+                - listitem [ref=f6e273]:
+                  - text: ●
+                  - link "Swiss Open Government Data" [ref=f6e275]:
+                    - /url: https://www.google.com/url?q=https://opendata.swiss/en/&sa=D&source=editors&ust=1782403183030094&usg=AOvVaw0KOAlzxDAUC4LWPbOzWtW8
+                  - text: "- opendata.swiss is the portal for Swiss open government data (OGD)."
+                - listitem [ref=f6e276]:
+                  - text: ●
+                  - link "Southern Oral History Program" [ref=f6e278]:
+                    - /url: https://www.google.com/url?q=https://dc.lib.unc.edu/cdm/landingpage/collection/sohp&sa=D&source=editors&ust=1782403183030474&usg=AOvVaw1oBz1U-hf3rUQ0YqF-Hm09
+                  - text: "- digital transcripts and audio from interviews"
+                - listitem [ref=f6e279]:
+                  - text: ●
+                  - link "Tableau Public" [ref=f6e281]:
+                    - /url: https://www.google.com/url?q=https://public.tableau.com/en-us/s/resources&sa=D&source=editors&ust=1782403183030757&usg=AOvVaw31fuO4r6Xovr5sagX5nJzN
+                  - text: "- Datasets on education, government, science, lifestyle and more."
+                - listitem [ref=f6e282]:
+                  - text: ●
+                  - link "Tidy Tuesday" [ref=f6e284]:
+                    - /url: https://www.google.com/url?q=https://github.com/rfordatascience/tidytuesday/blob/master/README.md&sa=D&source=editors&ust=1782403183031071&usg=AOvVaw2hEq2vC_H84lT14Ogts_6u
+                  - text: "- dataset repository for weekly data projects aimed at the R ecosystem"
+                - listitem [ref=f6e285]:
+                  - text: ●
+                  - link "Toronto Open Data" [ref=f6e287]:
+                    - /url: https://www.google.com/url?q=https://www.toronto.ca/city-government/data-research-maps/open-data/&sa=D&source=editors&ust=1782403183031427&usg=AOvVaw0zUxJ7NgLN0ZjwWaTsSJm-
+                  - text: "- Open data catalogue from city of Toronto."
+                - listitem [ref=f6e288]:
+                  - text: ●
+                  - link "Transport for London" [ref=f6e290]:
+                    - /url: https://www.google.com/url?q=https://tfl.gov.uk/info-for/open-data-users/our-open-data?intcmp%3D3671%23on-this-page-5&sa=D&source=editors&ust=1782403183031723&usg=AOvVaw1arXZt5D7pTMhlA5DbCfXD
+                  - text: "- TFL data feeds."
+                - listitem [ref=f6e291]:
+                  - text: ●
+                  - link "UC Irvine Machine Learning Repository" [ref=f6e293]:
+                    - /url: https://www.google.com/url?q=http://archive.ics.uci.edu/ml/index.php&sa=D&source=editors&ust=1782403183031984&usg=AOvVaw3oGGefs_FcYKMhUuVwWs6d
+                  - text: "- Nearly 400 datasets maintained as a service to the machine learning community. You may"
+                  - link "view all data sets" [ref=f6e295]:
+                    - /url: https://www.google.com/url?q=http://archive.ics.uci.edu/ml/datasets.html&sa=D&source=editors&ust=1782403183032289&usg=AOvVaw2prWUSK1DNhAKOgVvU5jMF
+                  - text: through our searchable interface.
+                - listitem [ref=f6e296]:
+                  - text: ●
+                  - link "UMich ICPSR" [ref=f6e298]:
+                    - /url: https://www.google.com/url?q=https://www.icpsr.umich.edu/icpsrweb/ICPSR/&sa=D&source=editors&ust=1782403183032530&usg=AOvVaw1Rx5UZaONBfVe2V8-JJ5Fn
+                  - text: "- University of Michigan’s searchable database."
+                - listitem [ref=f6e299]:
+                  - text: ●
+                  - link "UN Comtrade Database" [ref=f6e301]:
+                    - /url: https://www.google.com/url?q=https://comtradeplus.un.org/&sa=D&source=editors&ust=1782403183032797&usg=AOvVaw3KBYj-Fr2kpDXQIR6XRmUi
+                  - text: "- Trade statistics from the United Nations."
+                - listitem [ref=f6e302]:
+                  - text: ●
+                  - link "Uniform Crime Reporting" [ref=f6e304]:
+                    - /url: https://www.google.com/url?q=https://ucr.fbi.gov/&sa=D&source=editors&ust=1782403183033047&usg=AOvVaw0PQSKftQKM7sLrmuPPhX2x
+                  - text: "- FBI datasets."
+                - listitem [ref=f6e305]:
+                  - text: ●
+                  - link "University of Michican Research Guides" [ref=f6e307]:
+                    - /url: https://www.google.com/url?q=https://guides.lib.umich.edu/c.php?g%3D283416%26p%3D1887311&sa=D&source=editors&ust=1782403183033252&usg=AOvVaw2sKpxe9PQoOAhoFgOeUcFT
+                  - text: "- data repository for qualitative datasets"
+                - listitem [ref=f6e308]:
+                  - text: ●
+                  - link "University of Rochester LibGuide “Data-Stats”" [ref=f6e310]:
+                    - /url: https://www.google.com/url?q=http://libguides.lib.rochester.edu/data-stats&sa=D&source=editors&ust=1782403183033574&usg=AOvVaw1CD9bodtpO4C0c0pWZs2hL
+                  - text: "- Repository listing many public data sources & datasets."
+                - listitem [ref=f6e311]:
+                  - text: ●
+                  - link "US Bureau of Labor Statistics" [ref=f6e313]:
+                    - /url: https://www.google.com/url?q=https://www.bls.gov/nls/nlsy79.htm&sa=D&source=editors&ust=1782403183033867&usg=AOvVaw2AVaBmPeYkx-irhrim-5dG
+                  - text: "- National longitudinal surveys. See also “Databases & Tables by Subject.”"
+                - listitem [ref=f6e314]:
+                  - text: ●
+                  - link "US Census Bureau Data" [ref=f6e316]:
+                    - /url: https://www.google.com/url?q=https://www.census.gov/data.html&sa=D&source=editors&ust=1782403183034113&usg=AOvVaw0pU2xWEQm0IVQlf2NqgST4
+                  - text: "- Browse by topic, download data."
+                - listitem [ref=f6e317]:
+                  - text: ●
+                  - link "USA Facts" [ref=f6e319]:
+                    - /url: https://www.google.com/url?q=https://usafacts.org/&sa=D&source=editors&ust=1782403183034273&usg=AOvVaw0jftS2OlFXu32PahEsL-Y4
+                  - text: "- Federal, state and local data from over 70 government sources"
+                - listitem [ref=f6e320]:
+                  - text: ●
+                  - link "Utah Open Data" [ref=f6e322]:
+                    - /url: https://www.google.com/url?q=https://opendata.utah.gov/&sa=D&source=editors&ust=1782403183034444&usg=AOvVaw0dicL-VldDRIwkJ6hJT0Pw
+                  - text: "- State of Utah open data catalog with data provided by State of Utah agencies."
+                - listitem [ref=f6e323]:
+                  - text: ●
+                  - link "Varieties of Democracy" [ref=f6e325]:
+                    - /url: https://www.google.com/url?q=https://www.v-dem.net/data/&sa=D&source=editors&ust=1782403183034635&usg=AOvVaw20iIKiOvUB04h-0DnGjzkr
+                  - text: "- Time series data on various aspects of democracy."
+                - listitem [ref=f6e326]:
+                  - text: ●
+                  - link "Western Pennsylvania Regional Data Center" [ref=f6e328]:
+                    - /url: https://www.google.com/url?q=http://www.wprdc.org/&sa=D&source=editors&ust=1782403183034812&usg=AOvVaw25S2PyFplL1XHY5JrGPFq1
+                  - text: "- Now serving 262 datasets and counting."
+                - listitem [ref=f6e329]:
+                  - text: ●
+                  - link "WHO Data Repository" [ref=f6e331]:
+                    - /url: https://www.google.com/url?q=http://www.who.int/gho/database/en/&sa=D&source=editors&ust=1782403183034970&usg=AOvVaw2ZynzcD38yScsnc9qloCuF
+                  - text: "- World Health Organization database."
+                - listitem [ref=f6e332]:
+                  - text: ●
+                  - link "The World Bank Data Catalog" [ref=f6e334]:
+                    - /url: https://www.google.com/url?q=https://datacatalog.worldbank.org/&sa=D&source=editors&ust=1782403183035122&usg=AOvVaw1CaQ3hnpupI5s_XBah7OMu
+                  - text: "- 20K+ datasets, this catalog lists all open data and other publicly available data disseminated through World Bank sites."
+                - listitem [ref=f6e335]:
+                  - text: ●
+                  - link "World Values Survey" [ref=f6e337]:
+                    - /url: https://www.google.com/url?q=http://www.worldvaluessurvey.org/WVSContents.jsp&sa=D&source=editors&ust=1782403183035347&usg=AOvVaw0zNnCfBfqeMzmWRYmYg3-w
+                  - text: "- Data from nationally representative surveys conducted in almost 100 countries using a common questionnaire to measure changing values and impact on social and political life."
+                - listitem [ref=f6e338]:
+                  - text: ●
+                  - link "World Wealth & Income Database" [ref=f6e340]:
+                    - /url: https://www.google.com/url?q=http://wid.world/data/&sa=D&source=editors&ust=1782403183035610&usg=AOvVaw38t2CX3-mOn9J_CK3iaKYr
+                  - text: "- Download open access datasets."
+          - generic [ref=e26]: Loading…
+        - paragraph [ref=e33]: This is a private scratch copy. Edit freely and Ctrl+C from it — your real Google Doc is not affected.

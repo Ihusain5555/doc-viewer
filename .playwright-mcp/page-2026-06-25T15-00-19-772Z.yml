@@ -1,0 +1,33 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e3]: 📄 Doc Viewer
+    - generic [ref=e4]: Public data sources
+  - generic [ref=e5]:
+    - complementary [ref=e6]:
+      - generic [ref=e7]:
+        - textbox "Google Doc link" [ref=e8]:
+          - /placeholder: Paste a Google Doc link…
+        - button "Add" [ref=e9] [cursor=pointer]
+      - list [ref=e10]:
+        - listitem "Public data sources" [ref=e11] [cursor=pointer]:
+          - generic [ref=e12]: Public data sources
+          - button "✎" [ref=e13]
+          - button "✕" [ref=e14]
+      - paragraph [ref=e15]: Your list lives in this browser only. The editable copy never changes your real Google Doc.
+    - main [ref=e16]:
+      - generic [ref=e17]:
+        - generic [ref=e18]:
+          - generic [ref=e19]:
+            - button "Live view" [ref=e20] [cursor=pointer]
+            - button "Editable copy" [ref=e21] [cursor=pointer]
+          - button "↻ Refresh" [ref=e23] [cursor=pointer]
+        - generic [ref=e24]:
+          - iframe [ref=e25]:
+            - application [active] [ref=f5e1]:
+              - img [ref=f5e11]
+              - iframe [ref=f5e12]:
+                - textbox "Document content" [ref=f7e1]
+                - group
+              - link "Turn on screen reader support" [ref=f5e13] [cursor=pointer]:
+                - /url: "#"
+          - generic [ref=e26]: Loading…
