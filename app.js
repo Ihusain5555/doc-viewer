@@ -24,7 +24,24 @@ function loadDocs() {
   }
 }
 function saveDocs() {
-  localStorage.setItem(LS_DOCS, JSON.stringify(docs));
+  // Never let a blocked/full localStorage throw and abort the caller — the app
+  // must keep working in-memory even when the browser won't persist.
+  try {
+    localStorage.setItem(LS_DOCS, JSON.stringify(docs));
+    return true;
+  } catch {
+    return false;
+  }
+}
+
+let storageWarned = false;
+function warnStorageBlocked() {
+  if (storageWarned) return;
+  storageWarned = true;
+  setAddError(
+    'Heads up: your browser is blocking site storage, so this list won’t be remembered after you close the tab. ' +
+    'This usually means a private/incognito window, or that you opened the file directly instead of through http://localhost:3000.'
+  );
 }
 
 // ---------- state ----------
@@ -156,10 +173,9 @@ async function addDoc(e) {
   // Add immediately with a placeholder, then fill in the real title.
   const doc = { id, title: 'Loading…', addedAt: Date.now() };
   docs.push(doc);
-  saveDocs();
-  renderList();
   addInput.value = '';
-  openDoc(id);
+  openDoc(id); // render + open FIRST — never gated on whether storage works
+  if (!saveDocs()) warnStorageBlocked();
 
   try {
     const r = await fetch(`${API}?id=${encodeURIComponent(id)}&meta=1`);
