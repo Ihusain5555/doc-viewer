@@ -1,8 +1,0 @@
-- generic [active] [ref=e1]:
-  - heading "IFRAME LOAD FIRED" [level=3] [ref=e2]
-  - iframe [ref=e3]:
-    - application [active] [ref=f1e1]:
-      - img [ref=f1e10]
-      - iframe [ref=f1e11]:
-        - textbox "Document content" [ref=f2e1]
-        - group
