@@ -17,6 +17,11 @@
 
 * { box-sizing: border-box; }
 
+/* The [hidden] attribute must always win. Class rules like `.overlay{display:flex}`
+   otherwise override the browser's default [hidden]{display:none}, which left the
+   loading/error overlays permanently covering the document. */
+[hidden] { display: none !important; }
+
 html, body {
   margin: 0;
   height: 100%;
