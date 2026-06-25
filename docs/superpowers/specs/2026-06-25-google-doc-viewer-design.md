@@ -29,8 +29,13 @@ click — original untouched.
 1. **Add a doc** — paste a Google Doc share link; the app extracts the doc ID,
    auto-fills the doc's title (editable by the user), and saves it to the list.
 2. **Doc list** — a sidebar of saved docs; click to open; remove a doc.
-3. **Live view** — embeds the real doc (via Google's preview/embed URL); always
-   shows the current content on load; a **Refresh** button re-pulls the latest.
+3. **Live view** — renders the doc's current content **read-only inside the app**
+   (from the export HTML, same source as the editable copy); a **Refresh** button
+   re-pulls the latest; an **Open in Google Docs** button opens the full Google
+   viewer in a new tab. (We render it ourselves rather than embedding Google's
+   `/preview` viewer, because browsers block that cross-site embed via
+   third-party-cookie restrictions and it renders blank — confirmed in testing.
+   Self-rendering works in every browser.)
 4. **Editable copy** — one click pulls the doc's **formatted** content (bold,
    headings, lists) into an in-app rich editor the user can freely edit and
    Ctrl+C from. **Never writes back to the real Google Doc** (read-only, one-way
@@ -81,7 +86,9 @@ A lightweight front-end plus one tiny backend helper.
 │  (one page)  │   save list + scratch edits   │  (per-user, in browser)│
 └──────┬───────┘                               └───────────────────────┘
        │
-       │  Live view:  <iframe src=".../preview">  (direct, no backend)
+       │  Live view:  GET /api/doc  →  render read-only in a sandboxed iframe
+       │              (we render it ourselves; browsers block the cross-site
+       │               Google /preview embed, so it would show blank)
        │
        │  Edit copy:  GET /api/doc?id=DOC_ID
        ▼

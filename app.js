@@ -9,7 +9,7 @@
  */
 
 const API = '/api/doc';
-const previewUrl = (id) => `https://docs.google.com/document/d/${id}/preview`;
+const docEditUrl = (id) => `https://docs.google.com/document/d/${id}/edit`;
 
 const LS_DOCS = 'gdv:docs';
 const lsCopyKey = (id) => `gdv:copy:${id}`;
@@ -49,6 +49,7 @@ let docs = loadDocs();
 let selectedId = null;
 let mode = 'live'; // 'live' | 'edit'
 let saveTimer = null;
+let liveLoadedId = null; // which doc's live view is currently rendered
 
 // ---------- dom ----------
 const $ = (id) => document.getElementById(id);
@@ -62,6 +63,7 @@ const welcome = $('welcome');
 const viewer = $('viewer');
 const modes = $('modes');
 const refreshBtn = $('refreshBtn');
+const openExtBtn = $('openExtBtn');
 const selectAllBtn = $('selectAllBtn');
 const resetBtn = $('resetBtn');
 const saveState = $('saveState');
@@ -245,6 +247,7 @@ function setMode(m) {
     b.classList.toggle('active', b.dataset.mode === m);
   }
   refreshBtn.hidden = m !== 'live';
+  openExtBtn.hidden = m !== 'live';
   selectAllBtn.hidden = m !== 'edit';
   resetBtn.hidden = m !== 'edit';
   editHint.hidden = m !== 'edit';
@@ -258,22 +261,43 @@ function setMode(m) {
   else showEdit();
 }
 
-// ---------- live view ----------
-function showLive() {
-  const target = previewUrl(selectedId);
-  // Already showing this doc's live view (e.g. toggled back from Edit) — no reload.
-  if (liveFrame.src === target) {
+// ---------- live view (rendered from the doc's exported HTML, read-only) ----------
+// We render the doc ourselves instead of embedding Google's viewer, because
+// browsers block that cross-site embed (third-party cookies) and it shows blank.
+// This works in every browser. "Open in Google Docs" gives the full Google viewer.
+function renderReadOnly(frame, html) {
+  frame.onload = () => showLoading(false);
+  frame.srcdoc = html; // sandboxed (no scripts) — content is display-only + selectable
+}
+
+async function showLive(force) {
+  showViewerError('');
+  // Already showing this doc's live view (e.g. toggled back from Edit) — don't refetch.
+  if (!force && liveLoadedId === selectedId) {
     showLoading(false);
     return;
   }
   showLoading(true);
-  liveFrame.onload = () => showLoading(false);
-  liveFrame.src = target;
+  try {
+    const r = await fetch(`${API}?id=${encodeURIComponent(selectedId)}`);
+    const data = await r.json();
+    if (!data.ok) throw new Error(data.message || 'Could not load this doc.');
+    liveLoadedId = selectedId;
+    renderReadOnly(liveFrame, data.html);
+  } catch (e) {
+    liveLoadedId = null;
+    showLoading(false);
+    showViewerError(e.message || 'Could not load this doc.');
+  }
 }
+
 function refreshLive() {
-  showLoading(true);
-  liveFrame.onload = () => showLoading(false);
-  liveFrame.src = previewUrl(selectedId) + '?t=' + Date.now();
+  liveLoadedId = null; // force a fresh pull of the current document
+  showLive(true);
+}
+
+function openInGoogleDocs() {
+  if (selectedId) window.open(docEditUrl(selectedId), '_blank', 'noopener');
 }
 
 // ---------- editable copy ----------
@@ -379,6 +403,7 @@ modes.addEventListener('click', (e) => {
   if (b) setMode(b.dataset.mode);
 });
 refreshBtn.addEventListener('click', refreshLive);
+openExtBtn.addEventListener('click', openInGoogleDocs);
 resetBtn.addEventListener('click', resetCopy);
 selectAllBtn.addEventListener('click', selectAllCopy);
 

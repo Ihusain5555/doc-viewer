@@ -58,6 +58,7 @@
           </div>
           <div class="actions">
             <button type="button" id="refreshBtn" class="ghost">↻ Refresh</button>
+            <button type="button" id="openExtBtn" class="ghost" hidden>Open in Google Docs ↗</button>
             <button type="button" id="selectAllBtn" class="ghost" hidden>Select all (then Ctrl+C)</button>
             <button type="button" id="resetBtn" class="ghost" hidden>Reset copy</button>
             <span id="saveState" class="savestate" hidden></span>
@@ -65,7 +66,7 @@
         </div>
 
         <div class="frame-wrap">
-          <iframe id="liveFrame" class="docframe" title="Live document" loading="lazy" hidden></iframe>
+          <iframe id="liveFrame" class="docframe" title="Live document" sandbox="allow-same-origin" hidden></iframe>
           <!-- SECURITY: keep this sandbox WITHOUT allow-scripts — it is the sole barrier that
                prevents pulled doc HTML from running code in the user's browser. Do NOT add allow-scripts. -->
           <iframe id="editFrame" class="docframe" title="Editable copy" sandbox="allow-same-origin" hidden></iframe>

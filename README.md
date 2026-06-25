@@ -55,11 +55,14 @@ is required.
 
 ## How it works (plain version)
 
-- **Live view** embeds the real Google Doc using its `/preview` URL — always the
-  current content.
-- **Editable copy** asks a tiny backend (`/api/doc`) to fetch the doc's formatted
-  content, then drops it into a sandboxed, editable box in your browser. That copy
-  is yours alone; editing it never touches the real Google Doc.
+- **Live view** renders your doc's current content read-only inside the app — the
+  app fetches it through a tiny backend (`/api/doc`) and draws it itself, so it
+  works in every browser. **Open in Google Docs** opens the full Google viewer in
+  a new tab. (We render it ourselves because browsers block embedding Google's
+  viewer inside another site, which shows up blank.)
+- **Editable copy** uses the same backend to fetch the doc's formatted content,
+  then drops it into a sandboxed, editable box in your browser. That copy is yours
+  alone; editing it never touches the real Google Doc.
 
 The app is **strictly read-only** toward your real Docs — see `CLAUDE.md` for the
 full integrity rules.

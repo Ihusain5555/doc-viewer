@@ -44,8 +44,12 @@ From the running app, a fresh person can:
 - **One serverless function:** `api/doc.js`, Web-standard `export default { fetch }`,
   global `fetch`, Node 24 (pinned in `package.json`). Zero-config on Vercel — no
   `vercel.json`.
-- **Editable copy isolation:** rendered in an iframe with
-  `sandbox="allow-same-origin"` (scripts disabled) so doc HTML can't run code and
-  Google's CSS can't leak into the app UI. `designMode` makes it editable.
+- **Live view + editable copy both render the export HTML ourselves** in a
+  sandboxed iframe (`sandbox="allow-same-origin"`, scripts disabled) so doc HTML
+  can't run code and Google's CSS can't leak into the app UI. Live view is
+  read-only and re-fetched fresh; the editable copy uses `designMode` + is saved
+  to localStorage. We do NOT embed Google's `/preview` viewer — browsers block
+  that cross-site embed (third-party cookies) and it renders blank; an "Open in
+  Google Docs" button covers the full Google viewer.
 - **Local testing without Vercel:** `node dev-server.mjs` serves the static files
   and routes `/api/doc` through the real handler.
