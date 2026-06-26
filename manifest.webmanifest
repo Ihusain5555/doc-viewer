@@ -1,0 +1,16 @@
+{
+  "name": "Doc Viewer",
+  "short_name": "Doc Viewer",
+  "description": "Keep a list of Google Doc links, read them live, and make private editable fills you can keep and download. Your real Google Docs are never changed.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#0B0E14",
+  "theme_color": "#0B0E14",
+  "orientation": "any",
+  "icons": [
+    { "src": "icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icon-512-maskable.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}

@@ -53,3 +53,8 @@ From the running app, a fresh person can:
   Google Docs" button covers the full Google viewer.
 - **Local testing without Vercel:** `node dev-server.mjs` serves the static files
   and routes `/api/doc` through the real handler.
+- **Installable app (PWA):** `manifest.webmanifest` + `sw.js` + `icon-*.png` make it
+  installable as a one-click desktop app. The service worker is **network-first for
+  the shell** (so updates are never stuck behind a stale cache) and **MUST NEVER cache
+  `/api/`** (live doc data stays fresh and unstored — part of the integrity line). Bump
+  the `CACHE` name in `sw.js` when the shell file list changes.
