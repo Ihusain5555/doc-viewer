@@ -686,7 +686,9 @@ function setMode(m) {
 // ---------- live view (read-only render of the template's exported HTML) ----------
 function renderReadOnly(frame, html) {
   frame.onload = () => showLoading(false);
-  frame.srcdoc = html; // sandboxed (no scripts) — display-only + selectable
+  // Same page chrome as the editable copy so the live original reads as a real,
+  // fit-to-width document page on a desk — not a narrow column on a blank field.
+  frame.srcdoc = injectDocStyle(html); // sandboxed (no scripts) — display-only + selectable
 }
 
 async function showLive(force) {
@@ -720,20 +722,30 @@ function openInGoogleDocs() {
 }
 
 // ---------- editable copy (a fill) ----------
-// Give the fill a real "document" feel: a centered white sheet with margins on a
-// calm desk. Idempotent (guarded by id="dv-chrome") so re-loading a saved fill —
-// which already carries this style — never double-injects. Live view is left plain
-// so the read-only original and your private copy look clearly different.
+// Render the export HTML as a real "page": a centered white sheet with margins on a
+// calm grey desk, sized to FIT the pane width at any browser zoom (responsive — the
+// page reflows to the available width instead of overflowing or leaving a narrow
+// column in a sea of white). Used for BOTH the live view and the editable copies so
+// the original and your fills look like the same document.
+//   `!important` is required: Google's own body class pins a fixed ~8.5in width with
+//   1in padding, so without it the page can't shrink to fit and you'd still see the
+//   white-space problem. Idempotent (guarded by id="dv-chrome") so re-loading a saved
+//   fill — which already carries this style — never double-injects.
 function injectDocStyle(html) {
   if (typeof html !== 'string') return html;
   if (html.indexOf('dv-chrome') !== -1) return html;
   const style =
     "<style id=\"dv-chrome\">" +
-    "html{background:#e9ebef;-webkit-text-size-adjust:100%;}" +
-    "body{max-width:740px;margin:0 auto;background:#fff;padding:60px 72px;" +
-    "box-shadow:0 1px 3px rgba(16,24,40,.12),0 10px 30px rgba(16,24,40,.10);" +
-    "border-radius:3px;line-height:1.65;box-sizing:border-box;}" +
-    "@media(max-width:760px){body{padding:34px 26px;}html{padding:10px 6px;}}" +
+    "html{background:#eceef2!important;box-sizing:border-box;-webkit-text-size-adjust:100%;" +
+    "padding:clamp(10px,2.5vw,36px) clamp(8px,2vw,28px)!important;}" +
+    "body{box-sizing:border-box!important;width:100%!important;max-width:850px!important;" +
+    "margin:0 auto!important;background:#fff!important;" +
+    "padding:clamp(30px,7%,76px) clamp(22px,8%,84px)!important;" +
+    "box-shadow:0 1px 3px rgba(16,24,40,.13),0 16px 44px rgba(16,24,40,.12)!important;" +
+    "border-radius:4px;line-height:1.6;}" +
+    "img{max-width:100%!important;height:auto!important;}table{max-width:100%!important;}" +
+    "@media(max-width:760px){body{border-radius:0;" +
+    "padding:clamp(20px,6%,40px) clamp(16px,6%,34px)!important;}}" +
     "</style>";
   if (html.indexOf('</head>') !== -1) return html.replace('</head>', style + '</head>');
   const b = html.indexOf('<body');
