@@ -688,7 +688,8 @@ function renderReadOnly(frame, html) {
   frame.onload = () => showLoading(false);
   // Same page chrome as the editable copy so the live original reads as a real,
   // fit-to-width document page on a desk — not a narrow column on a blank field.
-  frame.srcdoc = injectDocStyle(html); // sandboxed (no scripts) — display-only + selectable
+  // injectWrapFix breaks long unspaced runs so nothing overflows the page edge.
+  frame.srcdoc = injectWrapFix(injectDocStyle(html)); // sandboxed (no scripts) — display-only + selectable
 }
 
 async function showLive(force) {
@@ -753,6 +754,26 @@ function injectDocStyle(html) {
   return style + html;
 }
 
+// Force long UNBREAKABLE runs to wrap so they can't run off the right edge of the
+// page: a long "fill in ____________" underscore line, a pasted URL, or any word with
+// no spaces. Kept in its OWN style block (id="dv-wrap"), separate from the page chrome,
+// so it also reaches fills that were saved before this fix — they pick it up the next
+// time they're opened, with no reset and no lost edits.
+function injectWrapFix(html) {
+  if (typeof html !== 'string') return html;
+  if (html.indexOf('dv-wrap') !== -1) return html;
+  const style =
+    "<style id=\"dv-wrap\">" +
+    "html,body,p,li,span,a,div,td,th,h1,h2,h3,h4,h5,h6,blockquote{" +
+    "overflow-wrap:anywhere!important;word-break:break-word!important;}" +
+    "td,th{word-break:break-word!important;}" +
+    "</style>";
+  if (html.indexOf('</head>') !== -1) return html.replace('</head>', style + '</head>');
+  const b = html.indexOf('<body');
+  if (b !== -1) return html.slice(0, b) + '<head>' + style + '</head>' + html.slice(b);
+  return style + html;
+}
+
 function loadEditFrame(html) {
   editFrame.onload = () => {
     showLoading(false);
@@ -768,7 +789,7 @@ function loadEditFrame(html) {
       showViewerError('Could not open the editable copy in this browser.');
     }
   };
-  editFrame.srcdoc = injectDocStyle(html);
+  editFrame.srcdoc = injectWrapFix(injectDocStyle(html));
 }
 
 async function showEdit() {
